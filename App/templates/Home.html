@@ -6,12 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRM</title>
+    <title>Altos CRM</title>
     <link rel="stylesheet" href="{% static 'CSS/Home.css' %}">
     <link rel="icon" href="{% static 'images/FutureLogo.webp' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
 
     <script defer src="{% static 'JS/index.js' %}"></script>
 
@@ -36,7 +37,7 @@
 
     <!-- NAVBAR -->
 
-    <nav style="padding-left: 2rem;padding-right:2rem;" class="navbar navbar-expand-lg bg-white navbar-light">
+    <nav style="padding-left: 2rem;padding-right:2rem;" class="navbar navbar-expand-lg bg-white navbar-light fixed-top">
         <div class="container-fluid ">
             <!-- <a class="navbar-brand m-0" href="#"></a>
             <a class="navbar-brand" href="./Dindex.html"></a> -->
@@ -54,7 +55,7 @@
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
                     <li class="nav-item">
-                        <a class="nav-link active  fst-italic fw-bold  px-3" aria-current="page"
+                        <a class="nav-link text-black  fst-italic fw-bold  px-3" aria-current="page"
                             href="{% url 'HomePage' %}">HOME</a>
                     </li>
                     <li class="nav-item">
@@ -95,7 +96,7 @@
         </div>
     </nav>
 
-
+    <br><br><br>
 
     <h1 class="container head1 heading text-center fw-medium fst-italic my-3">"Unleash Your Business Potential <br> with
         <span class="body fw-bold fst-italic text-black">Altos <span
@@ -112,8 +113,207 @@
     </div>
 
 
-    <br><br><br>
+    <br><br>
 
+
+    <!-- MESSAGES -->
+    <div class="container">
+
+        <div class="row">
+
+            <div style="max-height: 350px; overflow-y: auto;" class="col-md-6">
+                <div class="card-container drop1 justify-content-around" id="card-container1" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                    <div class="container">
+                        <h3 class="text-center fw-medium fst-italic">Messages <img class="mx-4" width="50px"
+                                src="{% static 'images/notification.png' %}" alt=""></h3>
+                    </div>
+
+
+                    <div class="card drop2" id="card1" draggable="true" ondragstart="drag(event)">
+                        <h4><img src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
+                                class="fst-italic body mx-2">Company Name</span></h4>
+                        <div class="card-content drop3">
+                            <h5 class="fst-italic">SUBJECT</h5>
+                            <p class="fst-italic">"Embrace the uncertainty of today with the confidence of tomorrow.
+                                Every challenge is an
+                                opportunity, and every setback is a lesson. Keep moving forward, for greatness lies
+                                ahead."</p>
+                            <a class="btn btn-outline-success fst-italic fw-medium" href="">READ</a>
+                        </div>
+                    </div>
+                    <div class="card drop2" id="card2" draggable="true" ondragstart="drag(event)">
+                        <h4><img src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
+                                class="fst-italic body mx-2">Company Name</span></h4>
+                        <div class="card-content drop3">
+                            <h5 class="fst-italic">SUBJECT</h5>
+                            <p class="fst-italic">"Embrace the uncertainty of today with the confidence of tomorrow.
+                                Every challenge is an
+                                opportunity, and every setback is a lesson. Keep moving forward, for greatness lies
+                                ahead."</p>
+                            <a class="btn btn-outline-success fst-italic fw-medium" href="">READ</a>
+                        </div>
+                    </div>
+                    <div class="card drop2" id="card3" draggable="true" ondragstart="drag(event)">
+                        <h4><img src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
+                                class="fst-italic body mx-2">Company Name</span></h4>
+                        <div class="card-content drop3">
+                            <h5 class="fst-italic">SUBJECT</h5>
+                            <p class="fst-italic">"Embrace the uncertainty of today with the confidence of tomorrow.
+                                Every challenge is an
+                                opportunity, and every setback is a lesson. Keep moving forward, for greatness lies
+                                ahead."</p>
+                            <a class="btn btn-outline-success fst-italic fw-medium" href="">READ</a>
+                        </div>
+                    </div>
+                    <div class="card drop2" id="card4" draggable="true" ondragstart="drag(event)">
+                        <h4><img src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
+                                class="fst-italic body mx-2">Company Name</span></h4>
+                        <div class="card-content drop3">
+                            <h5 class="fst-italic">SUBJECT</h5>
+                            <p class="fst-italic">"Embrace the uncertainty of today with the confidence of tomorrow.
+                                Every challenge is an
+                                opportunity, and every setback is a lesson. Keep moving forward, for greatness lies
+                                ahead."</p>
+                            <a class="btn btn-outline-success fst-italic fw-medium" href="">READ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="max-height: 350px; overflow-y: auto;" class="col-md-6">
+                <div class="card-container drop1" id="card-container2" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                    <!-- Droppable area -->
+                    <div class="container">
+                        <h3 class="text-center fw-medium fst-italic">Archived <img class="mx-4" width="50px"
+                                src="{% static 'images/archived.png' %}" alt=""></h3>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <br>
+
+
+    <h1 class="container head1 heading text-center fw-medium fst-italic my-3">Integrates with:
+    </h1>
+
+
+    <!-- FLIP CARD -->
+
+
+    <div class="container d-flex flex-wrap justify-content-center py-3 ">
+
+        <div class="flip-card mx-2 my-2">
+            <div class="flip-card-inner">
+                <div class="flip-card-front image">
+                    <img class="img-fluid img-thumbnail" src="{% static 'images/mail.svg' %}" alt="Avatar"
+                        style="width:250px;height:250px;">
+                    <h6 class="text-black head1 fs-3 fst-italic px-2 py-2 rounded-2">Mail</h6>
+                </div>
+
+                <div class="flip-card-back">
+                    <!-- <h1>John Doe</h1>
+                    <p>Architect & Engineer</p>-->
+                    <p class="text-black head1  fst-italic my-5">"Effortlessly manage customer communication: streamline
+                        email integration in your CRM for
+                        seamless interaction tracking and enhanced productivity."</p>
+                    <!-- <button style="margin-top:45%" class="btn btn-danger fst-italic fw-medium ">View Topic<svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg></button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card mx-2 my-2">
+            <div class="flip-card-inner">
+                <div class="flip-card-front image">
+                    <img class="img-fluid img-thumbnail" src="{% static 'images/message.svg' %}" alt="Avatar"
+                        style="width:250px;height:250px;">
+                    <h6 class="text-black head1 fs-3 fst-italic px-2 py-2 rounded-2">Live Chat</h6>
+                </div>
+                <div class="flip-card-back">
+                    <!-- <h1>John Doe</h1>
+                    <p>Architect & Engineer</p>-->
+                    <p class="text-black head1  fst-italic my-5">"Empower your team with Live Chat directly integrated
+                        into your CRM. Enhance customer support by providing instant assistance and personalized
+                        interactions, all while seamlessly managing conversations."</p>
+                    <!-- <button style="margin-top:45%" class="btn btn-danger fst-italic fw-medium ">View Topic<svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg></button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card mx-2 my-2">
+            <div class="flip-card-inner">
+                <div class="flip-card-front image">
+                    <img class="img-fluid img-thumbnail" src="{% static 'images/sms.svg' %}" alt="Avatar"
+                        style="width:250px;height:250px;">
+                    <h6 class="text-black head1 fs-3 fst-italic px-2 py-2 rounded-2">SMS</h6>
+                </div>
+                <div class="flip-card-back">
+                    <!-- <h1>John Doe</h1>
+                    <p>Architect & Engineer</p>-->
+                    <p class="text-black head1  fst-italic my-5">"Transform customer interactions with the power of SMS
+                        integration in your CRM. Seamlessly reach out to your audience wherever they are, delivering
+                        timely updates, personalized messages, and instant support. "</p>
+                    <!-- <button style="margin-top:45%" class="btn btn-danger fst-italic fw-medium ">View Topic<svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg></button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card mx-2 my-2">
+            <div class="flip-card-inner">
+                <div class="flip-card-front image">
+                    <img class="img-fluid img-thumbnail" src="{% static 'images/voip.svg' %}" alt="Avatar"
+                        style="width:250px;height:250px;">
+                    <h6 class="text-black head1 fs-3 fst-italic px-2 py-2 rounded-2">VoIP</h6>
+                </div>
+                <div class="flip-card-back">
+                    <!-- <h1>John Doe</h1>
+                    <p>Architect & Engineer</p>-->
+                    <p class="text-black head1  fst-italic my-5">Revolutionize your customer conversations with VoIP
+                        integration in your CRM. Seamlessly make and receive calls directly from your CRM platform,
+                        empowering your team with enhanced communication capabilities."</p>
+                    <!-- <button style="margin-top:45%" class="btn btn-danger fst-italic fw-medium ">View Topic<svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg></button> -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <br>
+
+    <h1 class="container head1 heading text-center fw-medium fst-italic my-3">Join 12 million <span
+            class="text-success">Happy Users</span>
+    </h1>
+
+    <br>
 
     <div style="background-color: rgba(0, 0, 0, 0.671);" class="container rounded-3 py-5">
         <div class="container">
@@ -131,14 +331,231 @@
         </div>
     </div>
 
+    <br>
+
+    <h1 class="container head1 heading text-center fw-medium fst-italic my-3">All the features
+        <span class="text-success">Done Right.</span>
+    </h1>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6  my-3">
+                <div style="border: 1px solid black;" class="container bg-light px-5 py-5 rounded-3">
+                    <h3 class=" fw-medium fst-italic">Enable Automation<img class="float-end" width="50px" height="50px"
+                            src="{% static 'images/yellow_star.svg' %}" alt=""></h3>
+                    <h5 class=" head1 text1 fst-italic text-black">Automate lead creation, team assignment, scheduled
+                        activities, and focus on what really matters.</h5>
+                </div>
+
+            </div>
+            <div class="col-md-6  my-3">
+                <div style="border: 1px solid black;" class="container bg-light px-5 py-5 rounded-3">
+                    <h3 class=" fw-medium fst-italic">AI Lead Scoring<img class="float-end" width="50px" height="50px"
+                            src="{% static 'images/yellow_star.svg' %}" alt=""></h3>
+                    <h5 class=" head1 text1 fst-italic text-black">Too many leads? Our AI scores leads to ensure you
+                        always work on the right priorities.</h5>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6  my-3">
+                <div style="border: 1px solid black;" class="container bg-light px-5 py-5 rounded-3">
+                    <h3 class=" fw-medium fst-italic">Reduce Manual Entry <img class="float-end" width="50px"
+                            height="50px" src="{% static 'images/yellow_star.svg' %}" alt=""></h3>
+                    <h5 class=" head1 text1 fst-italic text-black">Send quotes in just a few clicks, manage your
+                        pipeline by drag-and-dropping, and more.</h5>
+                </div>
+
+            </div>
+            <div class="col-md-6 my-3">
+                <div style="border: 1px solid black;" class="container bg-light px-5 py-5 rounded-3">
+                    <h3 class=" fw-medium fst-italic">Manage Leads<img class="float-end" width="50px" height="50px"
+                            src="{% static 'images/yellow_star.svg' %}" alt=""></h3>
+                    <h5 class=" head1 text1 fst-italic text-black">Create, acquire, import, nurture, score, etc. Manage
+                        all aspects of your leads in a single place.</h5>
+                </div>
+
+            </div>
+        </div>
+        <a class="text-decoration-none" href="">
+            <h2 class="head1 fw-medium fst-italic text-success">See All Features<img class="mx-3" width="30px"
+                    height="30px" src="{% static 'images/arrow.svg' %}" alt=""></h2>
+        </a>
+    </div>
+
+
+
+    <h1 class="container head1 heading text-center fw-medium fst-italic my-3">Testimonials
+
+    </h1><br>
+
+    <div class="container">
+
+
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="{% static 'images/testi1.jpg' %}" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Your Name
+                            </h2>
+                            <p class="description">The lorem text the section that contains header with having open
+                                functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="{% static 'images/testi2.avif' %}" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Your Name
+                            </h2>
+                            <p class="description">The lorem text the section that contains header with having open
+                                functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="{% static 'images/testi1.jpg' %}" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Your Name
+                            </h2>
+                            <p class="description">The lorem text the section that contains header with having open
+                                functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="{% static 'images/testi2.avif' %}" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Your Name
+                            </h2>
+                            <p class="description">The lorem text the section that contains header with having open
+                                functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="{% static 'images/testi1.jpg' %}" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Your Name
+                            </h2>
+                            <p class="description">The lorem text the section that contains header with having open
+                                functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="{% static 'images/testi2.avif' %}" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Your Name
+                            </h2>
+                            <p class="description">The lorem text the section that contains header with having open
+                                functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+    </div>
+
+    <br>
+
+    <h1 class="container head1 heading text-center fw-medium fst-italic my-3">FAQs
+
+    </h1>
+
+    <div style="width: 80%;" class="container">
+        <button style="border: 1px solid black; border-radius:3px;border-bottom:0px;" class="accordion fst-italic fw-medium">What is CRM
+            software, and how does it benefit businesses?</button>
+        <div style="border: 1px solid black; border-radius:3px;border-bottom:0px;" class="panel">
+            <p class="fst-italic py-3">CRM software, or Customer Relationship Management software, is a tool used by
+                businesses to manage interactions and relationships with both current and potential customers. It
+                typically includes features for organizing customer data, tracking interactions, automating tasks, and
+                analyzing customer interactions to improve sales, marketing, and customer service efforts.</p>
+        </div>
+
+        <button style="border: 1px solid black; border-radius:3px; border-bottom:0px;" class="accordion fst-italic fw-medium">What are the
+            key features to look for in a CRM software solution?</button>
+        <div style="border: 1px solid black; border-radius:3px;border-bottom:0px;" class="panel">
+            <p class="fst-italic py-3">Contact management: The ability to store and organize customer contact information,
+                including names, email addresses, phone numbers, and other relevant details.
+                Interaction tracking: Tools for logging and tracking interactions with customers across various
+                channels, such as email, phone calls, social media, and in-person meetings.</p>
+        </div>
+
+        <button style="border: 1px solid black; border-radius:3px;" class="accordion fst-italic fw-medium">What is CRM
+            software, and how does it benefit businesses?</button>
+        <div style="border: 1px solid black; border-radius:3px;" class="panel">
+            <p class="fst-italic py-3">CRM software, or Customer Relationship Management software, is a tool used by
+                businesses to manage interactions and relationships with both current and potential customers. It
+                typically includes features for organizing customer data, tracking interactions, automating tasks, and
+                analyzing customer interactions to improve sales, marketing, and customer service efforts.</p>
+        </div>
+    </div>
+
+
+
+
     <br><br>
-
-
-
-
-
-
-
 
     <!-- FOOTER -->
 
@@ -153,7 +570,7 @@
                     <div class="col-12 col-md-3 my-2">
                         <!-- <h5 class=" fw-bold mb-3">About Us</h5> -->
                         <br>
-                        <a class=" fw-medium text-danger fs-6 text-decoration-none" href="">"Empower Your Business
+                        <a class=" fw-medium text-warning fs-6 text-decoration-none" href="">"Empower Your Business
                             Relationships: Streamline, Connect, and Thrive with Our CRM Solutions"</a><br><br>
                         <a class=" fw-medium text-decoration-none" href=""><svg xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor" class="bi bi-telephone-fill"
@@ -192,7 +609,7 @@
                         <a class=" fw-medium text-decoration-none" href="">Upgrade</a><br>
                         <a class=" fw-medium text-decoration-none" href="">Custom Developments</a><br>
                         <a class=" fw-medium text-decoration-none" href="">Education</a><br><br>
-                    
+
                     </div>
 
                     <div class="col-12 col-md-3 my-2">
@@ -284,7 +701,7 @@
                 <!-- Modal body -->
                 <div class="modal-body bg-black ">
 
-                    <h3 class="fst-italic body text-center fw-medium text-white">Please LOGIN to Proceed </h3>
+                    <h3 class="fst-italic head1 text-center fw-medium text-white">Please LOGIN to Proceed </h3>
 
                 </div>
                 <!-- Modal footer -->
@@ -346,5 +763,10 @@
 
 
 </body>
+<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+
+<!-- JavaScript -->
+<!--Uncomment this line-->
+<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
 
 </html>
