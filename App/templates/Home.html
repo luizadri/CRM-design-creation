@@ -13,6 +13,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script defer src="{% static 'JS/index.js' %}"></script>
 
@@ -59,10 +60,10 @@
                             href="{% url 'HomePage' %}">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link   fst-italic fw-bold  px-3" href="">LINK</a>
+                        <a class="nav-link   fst-italic fw-bold  px-3" href="{% url 'PricePage' %}">PLANS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link   fst-italic fw-bold  px-3" href="">LINK</a>
+                        <a class="nav-link   fst-italic fw-bold  px-3" href="{% url 'hidden' %}">ARCHIVED</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle fst-italic fw-bold  px-3" href="#" role="button"
@@ -106,90 +107,86 @@
 
     <br><br>
 
-    <div class="container text-center">
+    <div data-aos="zoom-in" data-aos-duration="2000" class="container text-center">
 
-        <img class="img-fluid" src="{% static 'images/crm1.webp' %}" alt="">
+        <img width="1000px" class="img-fluid rounded-3" src="{% static 'images/bg0.avif' %}" alt="">
 
     </div>
 
 
-    <br><br>
+    <br><br><br>
 
 
     <!-- MESSAGES -->
-    <div class="container">
+    <div class="container bg-white py-4 rounded-3">
 
         <div class="row">
 
-            <div style="max-height: 350px; overflow-y: auto;" class="col-md-6">
-                <div class="card-container drop1 justify-content-around" id="card-container1" ondrop="drop(event)"
-                    ondragover="allowDrop(event)">
+            <div style="max-height: 650px; overflow-y:auto" class="col-12">
+                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                    class="card-container drop1 justify-content-around" id="card-container1">
                     <div class="container">
                         <h3 class="text-center fw-medium fst-italic">Messages <img class="mx-4" width="50px"
                                 src="{% static 'images/notification.png' %}" alt=""></h3>
                     </div>
 
 
-                    <div class="card drop2" id="card1" draggable="true" ondragstart="drag(event)">
-                        <h4><img src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
-                                class="fst-italic body mx-2">Company Name</span></h4>
+                    <div class="card drop2" id="card1" draggable="true">
+                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                                src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
+                                class="fst-italic body mx-2">Company ONE</span></h4>
                         <div class="card-content drop3">
                             <h5 class="fst-italic">SUBJECT</h5>
                             <p class="fst-italic">"Embrace the uncertainty of today with the confidence of tomorrow.
                                 Every challenge is an
                                 opportunity, and every setback is a lesson. Keep moving forward, for greatness lies
                                 ahead."</p>
-                            <a class="btn btn-outline-success fst-italic fw-medium" href="">READ</a>
+                            <a class="btn btn-outline-dark fst-italic fw-medium hide-btn" data-card-id="card1"
+                                href="">ARCHIVE</a>
                         </div>
                     </div>
-                    <div class="card drop2" id="card2" draggable="true" ondragstart="drag(event)">
-                        <h4><img src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
-                                class="fst-italic body mx-2">Company Name</span></h4>
+                    <div class="card drop2" id="card2" draggable="true">
+                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                                src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
+                                class="fst-italic body mx-2">Company TWO</span></h4>
                         <div class="card-content drop3">
                             <h5 class="fst-italic">SUBJECT</h5>
                             <p class="fst-italic">"Embrace the uncertainty of today with the confidence of tomorrow.
                                 Every challenge is an
                                 opportunity, and every setback is a lesson. Keep moving forward, for greatness lies
                                 ahead."</p>
-                            <a class="btn btn-outline-success fst-italic fw-medium" href="">READ</a>
+                            <a class="btn btn-outline-dark fst-italic fw-medium hide-btn" data-card-id="card2"
+                                href="">ARCHIVE</a>
                         </div>
                     </div>
-                    <div class="card drop2" id="card3" draggable="true" ondragstart="drag(event)">
-                        <h4><img src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
-                                class="fst-italic body mx-2">Company Name</span></h4>
+                    <div class="card drop2" id="card3" draggable="true">
+                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                                src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
+                                class="fst-italic body mx-2">Company THREE</span></h4>
                         <div class="card-content drop3">
                             <h5 class="fst-italic">SUBJECT</h5>
                             <p class="fst-italic">"Embrace the uncertainty of today with the confidence of tomorrow.
                                 Every challenge is an
                                 opportunity, and every setback is a lesson. Keep moving forward, for greatness lies
                                 ahead."</p>
-                            <a class="btn btn-outline-success fst-italic fw-medium" href="">READ</a>
+                            <a class="btn btn-outline-dark fst-italic fw-medium hide-btn" data-card-id="card3"
+                                href="">ARCHIVE</a>
                         </div>
                     </div>
-                    <div class="card drop2" id="card4" draggable="true" ondragstart="drag(event)">
-                        <h4><img src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
-                                class="fst-italic body mx-2">Company Name</span></h4>
+                    <div class="card drop2" id="card4" draggable="true">
+                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                                src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
+                                class="fst-italic body mx-2">Company FOUR</span></h4>
                         <div class="card-content drop3">
                             <h5 class="fst-italic">SUBJECT</h5>
                             <p class="fst-italic">"Embrace the uncertainty of today with the confidence of tomorrow.
                                 Every challenge is an
                                 opportunity, and every setback is a lesson. Keep moving forward, for greatness lies
                                 ahead."</p>
-                            <a class="btn btn-outline-success fst-italic fw-medium" href="">READ</a>
+                            <a class="btn btn-outline-dark fst-italic fw-medium hide-btn" data-card-id="card4"
+                                href="">ARCHIVE</a>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div style="max-height: 350px; overflow-y: auto;" class="col-md-6">
-                <div class="card-container drop1" id="card-container2" ondrop="drop(event)"
-                    ondragover="allowDrop(event)">
-                    <!-- Droppable area -->
-                    <div class="container">
-                        <h3 class="text-center fw-medium fst-italic">Archived <img class="mx-4" width="50px"
-                                src="{% static 'images/archived.png' %}" alt=""></h3>
-                    </div>
-
                 </div>
             </div>
 
@@ -198,7 +195,19 @@
     </div>
 
     <br>
+    <center>
+        <a class="btn btn-outline-success fst-italic fw-medium" href="{% url 'hidden' %}">VIEW ARCHIVED</a>
+    </center>
+    <br>
 
+    <div id="archive-popup"
+        style="display: none; position: fixed; top: 20%; left: 85%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.755); padding: 20px; border: 1px solid rgb(0, 0, 0); border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+        <p class="text-warning">Swipe to Archive</p>
+        <center>
+            <img width="50px" class="img-fluid" src="{% static 'images/archived.png' %}" alt="">
+        </center>
+        
+    </div>
 
     <h1 class="container head1 heading text-center fw-medium fst-italic my-3">Integrates with:
     </h1>
@@ -207,7 +216,8 @@
     <!-- FLIP CARD -->
 
 
-    <div class="container d-flex flex-wrap justify-content-center py-3 ">
+    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500"
+        class="container d-flex flex-wrap justify-content-center py-3 ">
 
         <div class="flip-card mx-2 my-2">
             <div class="flip-card-inner">
@@ -315,7 +325,8 @@
 
     <br>
 
-    <div style="background-color: rgba(0, 0, 0, 0.671);" class="container rounded-3 py-5">
+    <div data-aos="fade-up" data-aos-duration="1500" style="background-color: rgba(0, 0, 0, 0.671);"
+        class="container rounded-3 py-5">
         <div class="container">
             <div class="container">
 
@@ -339,7 +350,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-6  my-3">
+            <div data-aos="zoom-in" data-aos-duration="1500" class="col-md-6  my-3">
                 <div style="border: 1px solid black;" class="container bg-light px-5 py-5 rounded-3">
                     <h3 class=" fw-medium fst-italic">Enable Automation<img class="float-end" width="50px" height="50px"
                             src="{% static 'images/yellow_star.svg' %}" alt=""></h3>
@@ -348,7 +359,7 @@
                 </div>
 
             </div>
-            <div class="col-md-6  my-3">
+            <div data-aos="zoom-in" data-aos-duration="1500" class="col-md-6  my-3">
                 <div style="border: 1px solid black;" class="container bg-light px-5 py-5 rounded-3">
                     <h3 class=" fw-medium fst-italic">AI Lead Scoring<img class="float-end" width="50px" height="50px"
                             src="{% static 'images/yellow_star.svg' %}" alt=""></h3>
@@ -360,7 +371,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6  my-3">
+            <div data-aos="zoom-in" data-aos-duration="1500" class="col-md-6  my-3">
                 <div style="border: 1px solid black;" class="container bg-light px-5 py-5 rounded-3">
                     <h3 class=" fw-medium fst-italic">Reduce Manual Entry <img class="float-end" width="50px"
                             height="50px" src="{% static 'images/yellow_star.svg' %}" alt=""></h3>
@@ -369,7 +380,7 @@
                 </div>
 
             </div>
-            <div class="col-md-6 my-3">
+            <div data-aos="zoom-in" data-aos-duration="1500" class="col-md-6 my-3">
                 <div style="border: 1px solid black;" class="container bg-light px-5 py-5 rounded-3">
                     <h3 class=" fw-medium fst-italic">Manage Leads<img class="float-end" width="50px" height="50px"
                             src="{% static 'images/yellow_star.svg' %}" alt=""></h3>
@@ -397,7 +408,7 @@
         <div class="slide-container swiper">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
-                    <div class="card swiper-slide">
+                    <div data-aos="zoom-in" data-aos-duration="1500" class="card swiper-slide">
                         <div class="image-content">
                             <span class="overlay"></span>
 
@@ -415,7 +426,7 @@
                             <button class="button">View More</button>
                         </div>
                     </div>
-                    <div class="card swiper-slide">
+                    <div data-aos="zoom-in" data-aos-duration="1500" class="card swiper-slide">
                         <div class="image-content">
                             <span class="overlay"></span>
 
@@ -433,7 +444,7 @@
                             <button class="button">View More</button>
                         </div>
                     </div>
-                    <div class="card swiper-slide">
+                    <div data-aos="zoom-in" data-aos-duration="1500" class="card swiper-slide">
                         <div class="image-content">
                             <span class="overlay"></span>
 
@@ -451,7 +462,7 @@
                             <button class="button">View More</button>
                         </div>
                     </div>
-                    <div class="card swiper-slide">
+                    <div data-aos="zoom-in" data-aos-duration="1500" class="card swiper-slide">
                         <div class="image-content">
                             <span class="overlay"></span>
 
@@ -469,7 +480,7 @@
                             <button class="button">View More</button>
                         </div>
                     </div>
-                    <div class="card swiper-slide">
+                    <div data-aos="zoom-in" data-aos-duration="1500" class="card swiper-slide">
                         <div class="image-content">
                             <span class="overlay"></span>
 
@@ -487,7 +498,7 @@
                             <button class="button">View More</button>
                         </div>
                     </div>
-                    <div class="card swiper-slide">
+                    <div data-aos="zoom-in" data-aos-duration="1500" class="card swiper-slide">
                         <div class="image-content">
                             <span class="overlay"></span>
 
@@ -523,8 +534,9 @@
 
     </h1>
 
-    <div style="width: 80%;" class="container">
-        <button style="border: 1px solid black; border-radius:3px;border-bottom:0px;" class="accordion fst-italic fw-medium">What is CRM
+    <div data-aos="zoom-in-right" data-aos-duration="1500" style="width: 80%;" class="container">
+        <button style="border: 1px solid black; border-radius:3px;border-bottom:0px;"
+            class="accordion fst-italic fw-medium">What is CRM
             software, and how does it benefit businesses?</button>
         <div style="border: 1px solid black; border-radius:3px;border-bottom:0px;" class="panel">
             <p class="fst-italic py-3">CRM software, or Customer Relationship Management software, is a tool used by
@@ -533,10 +545,12 @@
                 analyzing customer interactions to improve sales, marketing, and customer service efforts.</p>
         </div>
 
-        <button style="border: 1px solid black; border-radius:3px; border-bottom:0px;" class="accordion fst-italic fw-medium">What are the
+        <button style="border: 1px solid black; border-radius:3px; border-bottom:0px;"
+            class="accordion fst-italic fw-medium">What are the
             key features to look for in a CRM software solution?</button>
         <div style="border: 1px solid black; border-radius:3px;border-bottom:0px;" class="panel">
-            <p class="fst-italic py-3">Contact management: The ability to store and organize customer contact information,
+            <p class="fst-italic py-3">Contact management: The ability to store and organize customer contact
+                information,
                 including names, email addresses, phone numbers, and other relevant details.
                 Interaction tracking: Tools for logging and tracking interactions with customers across various
                 channels, such as email, phone calls, social media, and in-person meetings.</p>
@@ -720,18 +734,87 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to show popup when archiving
+            function showArchivePopup() {
+                var popup = document.getElementById('archive-popup');
+                popup.style.display = 'block';
+                setTimeout(function () {
+                    popup.style.display = 'none';
+                }, 2000); // Hide popup after 2 seconds
+            }
+
+            // Function to hide a card
+            function hideCard(cardId) {
+                var card = document.getElementById(cardId);
+                card.style.display = 'none';
+                sessionStorage.setItem(cardId, 'hidden');
+            }
+
+            // Function to unhide a card
+            function unhideCard(cardId) {
+                var card = document.getElementById(cardId);
+                card.style.display = 'block';
+                sessionStorage.removeItem(cardId);
+            }
+
+            // Hide cards that were previously hidden
+            for (var i = 0; i < sessionStorage.length; i++) {
+                var cardId = sessionStorage.key(i);
+                hideCard(cardId);
+            }
+
+            // Add event listeners to hide buttons
+            var hideButtons = document.querySelectorAll('.hide-btn');
+            hideButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    var cardId = button.getAttribute('data-card-id');
+                    hideCard(cardId);
+                });
+            });
+
+            // Add event listeners to unhide buttons
+            var unhideButtons = document.querySelectorAll('.unhide-btn');
+            unhideButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    var cardId = button.getAttribute('data-card-id');
+                    unhideCard(cardId);
+                });
+            });
+
+            // Add event listener to cards for drag
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function (card) {
+                var startX = 0;
+
+                card.addEventListener('dragstart', function (e) {
+                    startX = e.clientX;
+                    showArchivePopup();
+                });
+
+                card.addEventListener('dragend', function (e) {
+                    var deltaX = Math.abs(e.clientX - startX);
+                    if (deltaX >= 20) {
+                        var cardId = card.id;
+                        hideCard(cardId);
+                        window.location.href = "{% url 'hidden' %}";
+                    }
+                });
+            });
+
+        });
+    </script>
 
 
 
 
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-
-
-
-
-
-
+    <script>
+        AOS.init();
+    </script>
 
 
     <!-- POPOVER -->

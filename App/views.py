@@ -6,6 +6,16 @@ def HomePage(request):
 
     return render(request, 'Home.html')
 
-def SamplePage(request):
 
-    return render(request, 'Sample.html')
+def PricePage(request):
+
+    return render(request, 'Price.html')
+
+
+def hidden(request):
+
+    return render(request, 'Archived.html')
+
+
+
+
