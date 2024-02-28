@@ -6,6 +6,4 @@ urlpatterns = [
     path('PricePage/', views.PricePage, name='PricePage'),
     path('hidden/', views.hidden, name='hidden'),
     
-    
-    
 ]

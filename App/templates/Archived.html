@@ -53,8 +53,8 @@
 
     <!-- TOAST -->
     <div style="width: 250px;" class="toast position-fixed" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header bg-black">
-            <span class="me-auto body fw-bold fs-4 fst-italic text-white">ALTOS <span
+        <div style="background-color: #ede200cb;" class="toast-header">
+            <span class="me-auto body fw-bold fs-4 fst-italic text-black">ALTOS <span
                     class="text-danger fs-5 fw-medium fst-italic">CRM</span></span>
             <button type="button" class="btn-close bg-danger" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
@@ -129,13 +129,15 @@
 
     <br><br><br>
 
-    <h1 class="container head1 heading text-center fw-medium fst-italic my-3">"Unleash Your Business Potential <br> with
+    <h1 style="background-color: #ede200cb;"
+        class="container head1 heading text-center fw-medium fst-italic my-3 py-3 px-3 rounded-3">"Unleash Your Business
+        Potential <br> with
         <span class="body fw-bold fst-italic text-black">Altos <span
                 class="body text-danger fw-medium fst-italic headingspan">CRM</span></span>
         Solutions"
     </h1>
 
-    <br><br>
+    <br>
 
 
     <!-- MESSAGES -->
@@ -148,12 +150,12 @@
                     class="card-container drop1 justify-content-around" id="card-container1">
                     <div class="container">
                         <h3 class="text-center fw-medium fst-italic">Archived <img class="mx-4" width="50px"
-                                src="{% static 'images/notification.png' %}" alt=""></h3>
+                                src="{% static 'images/archived.png' %}" alt=""></h3>
                     </div>
 
 
                     <div class="card drop2" id="card1" draggable="true">
-                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                        <h4 style="background-color: #ede200cb;" class="text-white"><img style="border: 2px solid white;"
                                 src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
                                 class="fst-italic body mx-2">Company ONE</span></h4>
                         <div class="card-content drop3">
@@ -167,7 +169,7 @@
                         </div>
                     </div>
                     <div class="card drop2" id="card2" draggable="true">
-                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                        <h4 style="background-color: #ede200cb;" class=" text-white"><img style="border: 2px solid white;"
                                 src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
                                 class="fst-italic body mx-2">Company TWO</span></h4>
                         <div class="card-content drop3">
@@ -181,7 +183,7 @@
                         </div>
                     </div>
                     <div class="card drop2" id="card3" draggable="true">
-                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                        <h4 style="background-color: #ede200cb;" class=" text-white"><img style="border: 2px solid white;"
                                 src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
                                 class="fst-italic body mx-2">Company THREE</span></h4>
                         <div class="card-content drop3">
@@ -195,7 +197,7 @@
                         </div>
                     </div>
                     <div class="card drop2" id="card4" draggable="true">
-                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                        <h4 style="background-color: #ede200cb;" class=" text-white"><img style="border: 2px solid white;"
                                 src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
                                 class="fst-italic body mx-2">Company FOUR</span></h4>
                         <div class="card-content drop3">
@@ -219,7 +221,7 @@
     <center>
         <a class="btn btn-outline-success fst-italic fw-medium" href="{% url 'HomePage' %}">BACK</a>
     </center>
-    
+
 
 
     <br><br>
@@ -366,9 +368,9 @@
                         aria-label="Close"></button>
                 </div>
                 <!-- Modal body -->
-                <div class="modal-body bg-black ">
+                <div style="background-color: #ede200cb;" class="modal-body  ">
 
-                    <h3 class="fst-italic head1 text-center fw-medium text-white">Please LOGIN to Proceed </h3>
+                    <h3 class="fst-italic head1 text-center fw-medium text-black">Please LOGIN to Proceed </h3>
 
                 </div>
                 <!-- Modal footer -->

@@ -23,8 +23,8 @@
 
     <!-- TOAST -->
     <div style="width: 250px;" class="toast position-fixed" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header bg-black">
-            <span class="me-auto body fw-bold fs-4 fst-italic text-white">ALTOS <span
+        <div style="background-color: #ede200cb;" class="toast-header ">
+            <span class="me-auto body fw-bold fs-4 fst-italic text-black">ALTOS <span
                     class="text-danger fs-5 fw-medium fst-italic">CRM</span></span>
             <button type="button" class="btn-close bg-danger" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
@@ -99,11 +99,31 @@
 
     <br><br><br>
 
-    <h1 class="container head1 heading text-center fw-medium fst-italic my-3">"Unleash Your Business Potential <br> with
-        <span class="body fw-bold fst-italic text-black">Altos <span
-                class="body text-danger fw-medium fst-italic headingspan">CRM</span></span>
-        Solutions"
-    </h1>
+    <div style="background-color: #ede200cb;" class="container py-5 px-3 rounded-3">
+        <div class="row">
+            <div class="col-lg-5">
+                <h1 class="container head1 heading text-center fw-medium fst-italic my-3">"Unleash Your
+                    Business
+                    Potential <br> with
+                    <span class="body fw-bold fst-italic text-black">Altos <span
+                            class="body text-danger fw-medium fst-italic headingspan">CRM</span></span>
+                    Solutions"
+                </h1>
+            </div>
+
+            <div class="col-lg-7 my-auto">
+                <div data-aos="zoom-in" data-aos-duration="2000" class="container text-center">
+
+                    <img width="1000px" class="img-fluid rounded-3" src="{% static 'images/car1.jpg' %}" alt="">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
 
     <br><br>
 
@@ -112,13 +132,40 @@
         <img width="1000px" class="img-fluid rounded-3" src="{% static 'images/bg0.avif' %}" alt="">
 
     </div>
+    <br><br>
+
+    <h1 class="container head1 heading text-center fw-medium fst-italic my-3">Join 12 million <span
+            class="text-success">Happy Users</span>
+    </h1>
+
+    <br>
+
+    <div data-aos="fade-up" data-aos-duration="1500" style="background-color: rgba(0, 0, 0, 0.671);"
+        class="container rounded-3 py-5">
+        <div class="container">
+            <div class="container">
 
 
-    <br><br><br>
+                <h5 class=" head1 text1 fst-italic text-white">"Welcome to our CRM platform, where every interaction
+                    counts. Our
+                    intuitive tools empower your team to nurture relationships, drive productivity, and foster
+                    growth.
+                    With customizable features tailored to your business needs, streamline operations, and unlock
+                    actionable insights to propel your success. Elevate customer satisfaction, optimize workflows,
+                    and
+                    stay ahead in today's dynamic market. Experience the difference with our comprehensive CRM
+                    solution,
+                    designed to transform your business relationships from ordinary to extraordinary."</h5>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br>
 
 
     <!-- MESSAGES -->
-    <div class="container bg-white py-4 rounded-3">
+    <div class="container bg-white py-5 rounded-3">
 
         <div class="row">
 
@@ -132,7 +179,7 @@
 
 
                     <div class="card drop2" id="card1" draggable="true">
-                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                        <h4 style="background-color: #ede200cb;" class=" text-white"><img style="border: 2px solid white;"
                                 src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
                                 class="fst-italic body mx-2">Company ONE</span></h4>
                         <div class="card-content drop3">
@@ -146,7 +193,7 @@
                         </div>
                     </div>
                     <div class="card drop2" id="card2" draggable="true">
-                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                        <h4 style="background-color: #ede200cb;" class=" text-white"><img style="border: 2px solid white;"
                                 src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
                                 class="fst-italic body mx-2">Company TWO</span></h4>
                         <div class="card-content drop3">
@@ -160,7 +207,7 @@
                         </div>
                     </div>
                     <div class="card drop2" id="card3" draggable="true">
-                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                        <h4 style="background-color: #ede200cb;" class=" text-white"><img style="border: 2px solid white;"
                                 src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
                                 class="fst-italic body mx-2">Company THREE</span></h4>
                         <div class="card-content drop3">
@@ -174,7 +221,7 @@
                         </div>
                     </div>
                     <div class="card drop2" id="card4" draggable="true">
-                        <h4 class="bg-black text-white"><img style="border: 2px solid white;"
+                        <h4 style="background-color: #ede200cb;" class=" text-white"><img style="border: 2px solid white;"
                                 src="{% static 'images/testi1.jpg' %}" alt="Image 1"><span
                                 class="fst-italic body mx-2">Company FOUR</span></h4>
                         <div class="card-content drop3">
@@ -201,12 +248,12 @@
     <br>
 
     <div id="archive-popup"
-        style="display: none; position: fixed; top: 20%; left: 85%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.755); padding: 20px; border: 1px solid rgb(0, 0, 0); border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
-        <p class="text-warning">Swipe to Archive</p>
+        style="display: none; position: fixed; top: 50%; left: 85%; transform: translate(-50%, -50%); background-color: rgb(0, 0, 0); padding: 20px; border: 1px solid rgb(0, 0, 0); border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+        <p class="text-warning px-5">Swipe to Archive</p>
         <center>
             <img width="50px" class="img-fluid" src="{% static 'images/archived.png' %}" alt="">
         </center>
-        
+
     </div>
 
     <h1 class="container head1 heading text-center fw-medium fst-italic my-3">Integrates with:
@@ -230,7 +277,8 @@
                 <div class="flip-card-back">
                     <!-- <h1>John Doe</h1>
                     <p>Architect & Engineer</p>-->
-                    <p class="text-black head1  fst-italic my-5">"Effortlessly manage customer communication: streamline
+                    <p class="text-black head1  fst-italic my-5">"Effortlessly manage customer communication:
+                        streamline
                         email integration in your CRM for
                         seamless interaction tracking and enhanced productivity."</p>
                     <!-- <button style="margin-top:45%" class="btn btn-danger fst-italic fw-medium ">View Topic<svg
@@ -253,7 +301,8 @@
                 <div class="flip-card-back">
                     <!-- <h1>John Doe</h1>
                     <p>Architect & Engineer</p>-->
-                    <p class="text-black head1  fst-italic my-5">"Empower your team with Live Chat directly integrated
+                    <p class="text-black head1  fst-italic my-5">"Empower your team with Live Chat directly
+                        integrated
                         into your CRM. Enhance customer support by providing instant assistance and personalized
                         interactions, all while seamlessly managing conversations."</p>
                     <!-- <button style="margin-top:45%" class="btn btn-danger fst-italic fw-medium ">View Topic<svg
@@ -276,7 +325,8 @@
                 <div class="flip-card-back">
                     <!-- <h1>John Doe</h1>
                     <p>Architect & Engineer</p>-->
-                    <p class="text-black head1  fst-italic my-5">"Transform customer interactions with the power of SMS
+                    <p class="text-black head1  fst-italic my-5">"Transform customer interactions with the power of
+                        SMS
                         integration in your CRM. Seamlessly reach out to your audience wherever they are, delivering
                         timely updates, personalized messages, and instant support. "</p>
                     <!-- <button style="margin-top:45%" class="btn btn-danger fst-italic fw-medium ">View Topic<svg
@@ -319,42 +369,21 @@
 
     <br>
 
-    <h1 class="container head1 heading text-center fw-medium fst-italic my-3">Join 12 million <span
-            class="text-success">Happy Users</span>
-    </h1>
-
-    <br>
-
-    <div data-aos="fade-up" data-aos-duration="1500" style="background-color: rgba(0, 0, 0, 0.671);"
-        class="container rounded-3 py-5">
-        <div class="container">
-            <div class="container">
-
-
-                <h5 class=" head1 text1 fst-italic text-white">"Welcome to our CRM platform, where every interaction
-                    counts. Our
-                    intuitive tools empower your team to nurture relationships, drive productivity, and foster growth.
-                    With customizable features tailored to your business needs, streamline operations, and unlock
-                    actionable insights to propel your success. Elevate customer satisfaction, optimize workflows, and
-                    stay ahead in today's dynamic market. Experience the difference with our comprehensive CRM solution,
-                    designed to transform your business relationships from ordinary to extraordinary."</h5>
-            </div>
-        </div>
-    </div>
 
     <br>
 
     <h1 class="container head1 heading text-center fw-medium fst-italic my-3">All the features
         <span class="text-success">Done Right.</span>
     </h1>
-    <div class="container">
+    <div style="background-color: #ede200cb;" class="container pt-5 pb-4 px-3 rounded-3">
 
         <div class="row">
             <div data-aos="zoom-in" data-aos-duration="1500" class="col-md-6  my-3">
                 <div style="border: 1px solid black;" class="container bg-light px-5 py-5 rounded-3">
                     <h3 class=" fw-medium fst-italic">Enable Automation<img class="float-end" width="50px" height="50px"
                             src="{% static 'images/yellow_star.svg' %}" alt=""></h3>
-                    <h5 class=" head1 text1 fst-italic text-black">Automate lead creation, team assignment, scheduled
+                    <h5 class=" head1 text1 fst-italic text-black">Automate lead creation, team assignment,
+                        scheduled
                         activities, and focus on what really matters.</h5>
                 </div>
 
@@ -384,7 +413,8 @@
                 <div style="border: 1px solid black;" class="container bg-light px-5 py-5 rounded-3">
                     <h3 class=" fw-medium fst-italic">Manage Leads<img class="float-end" width="50px" height="50px"
                             src="{% static 'images/yellow_star.svg' %}" alt=""></h3>
-                    <h5 class=" head1 text1 fst-italic text-black">Create, acquire, import, nurture, score, etc. Manage
+                    <h5 class=" head1 text1 fst-italic text-black">Create, acquire, import, nurture, score, etc.
+                        Manage
                         all aspects of your leads in a single place.</h5>
                 </div>
 
@@ -396,7 +426,7 @@
         </a>
     </div>
 
-
+    <br>
 
     <h1 class="container head1 heading text-center fw-medium fst-italic my-3">Testimonials
 
@@ -541,7 +571,8 @@
         <div style="border: 1px solid black; border-radius:3px;border-bottom:0px;" class="panel">
             <p class="fst-italic py-3">CRM software, or Customer Relationship Management software, is a tool used by
                 businesses to manage interactions and relationships with both current and potential customers. It
-                typically includes features for organizing customer data, tracking interactions, automating tasks, and
+                typically includes features for organizing customer data, tracking interactions, automating tasks,
+                and
                 analyzing customer interactions to improve sales, marketing, and customer service efforts.</p>
         </div>
 
@@ -556,12 +587,14 @@
                 channels, such as email, phone calls, social media, and in-person meetings.</p>
         </div>
 
-        <button style="border: 1px solid black; border-radius:3px;" class="accordion fst-italic fw-medium">What is CRM
+        <button style="border: 1px solid black; border-radius:3px;" class="accordion fst-italic fw-medium">What is
+            CRM
             software, and how does it benefit businesses?</button>
         <div style="border: 1px solid black; border-radius:3px;" class="panel">
             <p class="fst-italic py-3">CRM software, or Customer Relationship Management software, is a tool used by
                 businesses to manage interactions and relationships with both current and potential customers. It
-                typically includes features for organizing customer data, tracking interactions, automating tasks, and
+                typically includes features for organizing customer data, tracking interactions, automating tasks,
+                and
                 analyzing customer interactions to improve sales, marketing, and customer service efforts.</p>
         </div>
     </div>
@@ -713,9 +746,9 @@
                         aria-label="Close"></button>
                 </div>
                 <!-- Modal body -->
-                <div class="modal-body bg-black ">
+                <div style="background-color: #ede200cb;" class="modal-body  ">
 
-                    <h3 class="fst-italic head1 text-center fw-medium text-white">Please LOGIN to Proceed </h3>
+                    <h3 class="fst-italic head1 text-center fw-medium text-black">Please LOGIN to Proceed </h3>
 
                 </div>
                 <!-- Modal footer -->
